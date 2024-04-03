@@ -7,3 +7,9 @@ const client = new SapphireClient({
 });  
 
 client.login(process.env['DISCORD_TOKEN']);
+Bun.serve({
+    fetch() {
+        return new Response("Hello world!");
+    },
+    port: 8080
+});
