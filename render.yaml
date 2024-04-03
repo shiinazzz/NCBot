@@ -1,5 +1,5 @@
 services:
-  - type: web
+  - type: worker
     name: bun
     env: docker
     repo: https://github.com/shiinazzz/NCBot
