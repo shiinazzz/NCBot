@@ -1,4 +1,5 @@
 import { Command } from '@sapphire/framework';
+import type { Message } from 'discord.js';
 
 export class PingCommand extends Command {
   public constructor(context: Command.LoaderContext, options: Command.Options) {
@@ -15,6 +16,10 @@ export class PingCommand extends Command {
     registry.registerChatInputCommand((builder) =>
       builder.setName('lover').setDescription('yeah')
     );
+  }
+
+  public async messageRun(message: Message) {
+    return message.reply("no sensei stop bein cunny");
   }
 
   public async chatInputRun(interaction: Command.ChatInputCommandInteraction) {
