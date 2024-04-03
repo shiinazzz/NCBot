@@ -1,0 +1,23 @@
+{
+  "name": "ncbot",
+  "version": "1.0.0",
+  "description": "A bot for NC High School.. totally :3",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "dev": "bun --hot run index.ts"
+  },
+  "author": "arii.desu",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bun": "^1.0.12"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@sapphire/framework": "^5.0.10",
+    "discord.js": "^14.14.1"
+  }
+}
