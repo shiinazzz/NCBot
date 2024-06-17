@@ -7,7 +7,7 @@
   "scripts": {
     "start": "bun run src/index.ts",
     "dev": "bun --hot run index.ts",
-    "start-daemon": "pm2 start pm2.config.js"
+    "start-daemon": "pm2 start --interpreter ~/.bun/bin/bun src/index.ts"
   },
   "author": "arii.desu",
   "license": "ISC",
