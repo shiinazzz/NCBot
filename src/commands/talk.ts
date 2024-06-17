@@ -21,6 +21,10 @@ async function communicate(message: string): Promise<string> {
     return response.text;
 }
 
+function prompt(author: string, message: string): string {
+    return `(OOC: This message was sent by ${author}. Context: Multiple people are using you to chat in a chatroom, just reply like normally.)\n${message}`
+}
+
 export class PingCommand extends Command {
   public constructor(context: Command.LoaderContext, options: Command.Options) {
     super(context, {
@@ -40,7 +44,7 @@ export class PingCommand extends Command {
   }
 
   public async messageRun(message: Message) {
-    return message.reply(await communicate(message.content));
+    return message.reply(await communicate(prompt(message.author.tag, message.content)));
   }
 
   public async chatInputRun(interaction: Command.ChatInputCommandInteraction) {
@@ -50,6 +54,6 @@ export class PingCommand extends Command {
     }
 
     await interaction.deferReply();
-    return interaction.editReply(await communicate(message));
+    return interaction.editReply(await communicate(prompt(interaction.user.tag, message)));
   }
 }
