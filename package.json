@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "bun run src/index.ts",
-    "dev": "bun --hot run index.ts"
+    "dev": "bun --hot run index.ts",
+    "start-daemon": "pm2 start pm2.config.js"
   },
   "author": "arii.desu",
   "license": "ISC",
@@ -19,6 +20,7 @@
   "dependencies": {
     "@sapphire/framework": "^5.0.10",
     "discord.js": "^14.14.1",
-    "node_characterai": "^1.2.7"
+    "node_characterai": "^1.2.7",
+    "pm2": "^5.4.0"
   }
 }
