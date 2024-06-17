@@ -7,5 +7,5 @@ const client = new SapphireClient({
     loadMessageCommandListeners: true
 });  
 
-client.login(process.env['DISCORD_TOKEN']);
 await characterAI.connect();
+client.login(process.env['DISCORD_TOKEN']);

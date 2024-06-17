@@ -21,5 +21,6 @@ export const communicate = async (message: string): Promise<string> => {
 }
 
 export const promptForDiscord = (author: string, message: string): string => {
-    return `(OOC: This message was sent by ${author}. Context: Multiple people are using you to chat in a chatroom, just reply like normally.)\n${message}`
+    // Yikes, she knows
+    return message; //`(OOC: This message was sent by ${author}. Context: Multiple people are using you to chat in a chatroom, just reply like normally.)\n${message}`
 }
