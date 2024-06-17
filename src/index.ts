@@ -8,4 +8,4 @@ const client = new SapphireClient({
 });  
 
 client.login(process.env['DISCORD_TOKEN']);
-characterAI.connect();
+await characterAI.connect();
