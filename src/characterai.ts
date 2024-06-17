@@ -8,6 +8,7 @@ let characterChat: any = undefined;
 export const connect = async () => {
     await AI_CLIENT.authenticateWithToken(process.env["CHARACTERAI_SESSION_TOKEN"]);
     characterChat = await AI_CLIENT.createOrContinueChat(SHIROKO_ID);
+    console.log("Character.AI chat connected.");
 }
 
 export const communicate = async (message: string): Promise<string> => {
